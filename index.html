@@ -5,26 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes Patrio - Historia y Tradición</title>
   <style>
-
-    #inicio {
-      background: linear-gradient(to right, #006837 0%, #a2d2a7 20%, #ffffff 50%, #f1a3ad 80%, #c8102e 100%) !important;
-    }
-    :root {
-      --verde-patrio: #005a36;
-      --verde-oscuro: #003822;
-      --rojo-patrio: #c8102e;
-      --rojo-oscuro: #8b0018;
-      --dorado: #f4d03f;
-      --blanco: #ffffff;
-      --gris-claro: #f8f9fa;
-      --texto-oscuro: #FFFFFF;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     html {
@@ -35,28 +20,17 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
+      background: #000000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
 
     .navbar .logo {
-      color: var(--dorado);
+      color: #f4d03f;
       font-size: 1.3rem;
       font-weight: bold;
-      letter-spacing: 1.5px;
-      margin-right: 2px;
     }
 
     .nav-links {
@@ -65,19 +39,11 @@
     }
 
     .nav-btn {
-      color: var(--blanco);
+      color: #ffffff;
       text-decoration: none;
       padding: 8px 16px;
-      border-radius: 20px;
       font-size: 0.9rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
-    }
-
-    .nav-btn:hover {
-      background-color: var(--dorado);
-      color: var(--texto-oscuro);
+      border: 1px solid #ffffff;
     }
 
     section {
@@ -93,55 +59,29 @@
       text-align: center;
       margin-bottom: 40px;
       max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .section-title {
       font-size: 2.5rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
       margin-bottom: 15px;
-      position: relative;
-      display: inline-block;
-      text-align: center;
-    }
-
-    .section-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 15px 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     #inicio {
-      background: linear-gradient(135deg, var(--verde-patrio) 0%, var(--verde-oscuro) 100%);
-      color: var(--blanco);
+      background: #006837;
+      color: #ffffff;
       text-align: center;
     }
 
     #inicio .section-title {
-      color: var(--dorado);
+      color: #f4d03f;
       font-size: 3rem;
     }
 
-    #inicio .section-title::after {
-      content: '';
-      position: absolute;
-      width: 60%;
-      height: 3px;
-      background: var(--rojo-patrio);
-      bottom: -8px;
-      left: 20%;
-    }
-
     .intro-text {
-      font-size: 1.2rem;
-      line-height: 1.8;
+      font-size: 1.1rem;
+      line-height: 1.6;
       margin: 25px 0 40px 0;
-      opacity: 0.95;
     }
 
     .hero-actions {
@@ -152,243 +92,147 @@
     }
 
     .cta-button {
-      padding: 14px 30px;
-      border-radius: 30px;
+      padding: 12px 24px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      background: var(--verde-patrio);
-      color: var(--texto-oscuro);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
 
     #fechas {
-      background: var(--verde-oscuro);
-      color: var(--blanco);
+      background: #003822;
+      color: #ffffff;
     }
 
     #fechas .section-title {
-      color: var(--dorado);
+      color: #f4d03f;
     }
 
     .timeline {
-      position: relative;
-      max-width: 900px;
+      max-width: 800px;
       width: 100%;
-      margin: 20px auto 0 auto;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 4px;
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateX(-50%);
+      margin-top: 20px;
     }
 
     .timeline-item {
-      position: relative;
-      margin-bottom: 40px;
-      width: 50%;
-    }
-
-    .timeline-item:nth-child(odd) {
-      left: 0;
-      padding-right: 40px;
-      text-align: right;
-    }
-
-    .timeline-item:nth-child(even) {
-      left: 50%;
-      padding-left: 40px;
-      text-align: left;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      top: 15px;
-      width: 20px;
-      height: 20px;
-      background: var(--dorado);
-      border-radius: 50%;
-      box-shadow: 0 0 10px var(--dorado);
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot {
-      right: -10px;
-    }
-
-    .timeline-item:nth-child(even) .timeline-dot {
-      left: -10px;
-    }
-
-    .timeline-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      margin-bottom: 25px;
+      border-left: 4px solid #f4d03f;
+      padding-left: 20px;
     }
 
     .timeline-date {
-      color: var(--dorado);
+      color: #f4d03f;
       font-weight: bold;
       font-size: 1.2rem;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       display: block;
     }
 
     #personajes {
-      background-color: var(--gris-claro);
-      color: var(--texto-oscuro);
+      background-color: #f4f4f4;
+      color: #2b2b2b;
     }
 
     #personajes .section-title {
-      color: var(--verde-patrio);
-    }
-
-    #personajes .section-title::after {
-      content: '';
-      position: absolute;
-      width: 60%;
-      height: 3px;
-      background: var(--rojo-patrio);
-      bottom: -8px;
-      left: 20%;
+      color: #006837;
     }
 
     .grid-personajes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
       width: 100%;
       max-width: 1100px;
     }
 
     .personaje-card {
-      background: var(--blanco);
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      border-top: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 250px;
       text-align: center;
     }
 
     .personaje-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
       margin-bottom: 15px;
-      border: 3px solid var(--gris-claro);
-    }
-
-    .mirar-derecha {
-      transform: scaleX(-1);
+      border: 1px solid #ccc;
     }
 
     .badge-role {
       font-size: 0.8rem;
+      font-weight: bold;
+      color: #c8102e;
+      margin-bottom: 10px;
+      display: block;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-      color: var(--rojo-patrio);
-      background: rgba(200, 16, 46, 0.1);
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 12px;
     }
 
     .personaje-card h3 {
-      font-size: 1.4rem;
-      color: #2b2b2b !important;
+      font-size: 1.3rem;
+      color: #2b2b2b;
       margin-bottom: 10px;
-      font-weight: bold;
     }
 
     .personaje-card p {
-      color: #666;
+      color: #444;
       font-size: 0.95rem;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     #curiosidades {
-      background: linear-gradient(135deg, var(--rojo-patrio) 0%, var(--rojo-oscuro) 100%);
-      color: var(--blanco);
-    }
-
-    #curiosidades .section-title {
-      color: var(--blanco);
-    }
-
-    #curiosidades .section-title::after {
-      content: '';
-      position: absolute;
-      width: 60%;
-      height: 3px;
-      background: var(--dorado);
-      bottom: -8px;
-      left: 20%;
+      background: #c8102e;
+      color: #ffffff;
     }
 
     .curiosidades-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
       width: 100%;
       max-width: 1100px;
     }
 
     .panel-box {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 16px;
-      padding: 30px;
-      backdrop-filter: blur(10px);
+      width: 300px;
     }
 
     .panel-box h3 {
       font-size: 1.5rem;
-      color: var(--dorado);
-      margin-bottom: 20px;
+      color: #f4d03f;
+      margin-bottom: 15px;
     }
 
     .info-list {
-      list-style: square;
       padding-left: 20px;
     }
 
     .info-list li {
-      margin-bottom: 18px;
-      line-height: 1.6;
-      font-size: 0.98rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
     }
 
     .mito-tag {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      border-left: none;
+      margin-bottom: 20px;
     }
 
     .mito-tag strong {
-      color: var(--dorado);
+      color: #f4d03f;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-top: 3px solid #f4d03f;
     }
 
     @media (max-width: 768px) {
@@ -396,21 +240,6 @@
         flex-direction: column;
         gap: 10px;
         padding: 12px;
-      }
-
-      .timeline::before {
-        left: 20px;
-      }
-
-      .timeline-item {
-        width: 100% !important;
-        padding-left: 50px !important;
-        padding-right: 0 !important;
-        text-align: left !important;
-      }
-
-      .timeline-dot {
-        left: 10px !important;
       }
     }
   </style>
@@ -420,7 +249,7 @@
   <nav class="navbar">
     <div style="display: flex; align-items: center; gap: 8px;">
       <div class="logo">MES PATRIO</div>
-      <img src="01.png" alt="Bandera de México" style="height: 22px; width: auto; border-radius: 2px;">
+      <img src="01.png" alt="Bandera de México" style="height: 22px; width: auto;">
     </div>
     <div class="nav-links">
       <a href="#fechas" class="nav-btn">Fechas Importantes</a>
@@ -431,55 +260,17 @@
 
   <section id="inicio">
     <div class="section-header">
-      <img src="07.png" alt="Escudo de México" style="max-width: 180px; margin-bottom: 10px; mix-blend-mode: multiply; box-shadow: none; border-radius: 0;">
+      <img src="07.png" alt="Escudo de México" style="max-width: 150px; margin-bottom: 10px;">
       
       <h1 class="section-title">Mes Patrio</h1>
 
-      <p class="intro-text" style="font-size: 1.1rem; line-height: 1.6; color: #000000; font-weight: 700; margin-bottom: 45px; max-width: 800px;">
+      <p class="intro-text">
         Septiembre es conocido como el Mes Patrio en México, ya que durante este periodo se conmemoran acontecimientos fundamentales relacionados con la lucha por la Independencia y la soberanía del país. Es un momento para recordar a los héroes nacionales y celebrar los valores, tradiciones e identidad que nos unen.
       </p>
-      <div class="hero-actions" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; width: 100%;">
-  
-        <a href="#fechas" class="cta-button" style="
-          background-color: #006837; 
-          color: #ffffff; 
-          padding: 14px 28px; 
-          border-radius: 30px; 
-          text-decoration: none; 
-          font-weight: 800; 
-          font-size: 1rem; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        ">
-          Fechas Importantes
-        </a>
-
-        <a href="#personajes" class="cta-button" style="
-          background-color: #ffffff; 
-          color: #111111; 
-          padding: 14px 28px; 
-          border-radius: 30px; 
-          text-decoration: none; 
-          font-weight: 800; 
-          font-size: 1rem; 
-          border: 2px solid #cccccc; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        ">
-          Personajes Ilustres
-        </a>
-
-        <a href="#curiosidades" class="cta-button" style="
-          background-color: #c8102e; 
-          color: #ffffff; 
-          padding: 14px 28px; 
-          border-radius: 30px; 
-          text-decoration: none; 
-          font-weight: 800; 
-          font-size: 1rem; 
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        ">
-          Datos Curiosos y Mitos
-        </a>
-
+      <div class="hero-actions">
+        <a href="#fechas" class="cta-button" style="background-color: #003822; color: #ffffff;">Fechas Importantes</a>
+        <a href="#personajes" class="cta-button" style="background-color: #ffffff; color: #111111;">Personajes Ilustres</a>
+        <a href="#curiosidades" class="cta-button" style="background-color: #c8102e; color: #ffffff;">Datos Curiosos y Mitos</a>
       </div>
     </div>
   </section>
@@ -487,56 +278,38 @@
   <section id="fechas">
     <div class="section-header">
       <h2 class="section-title">Fechas Importantes</h2>
-      <p style="opacity: 0.9;">Acontecimientos históricos destacados del mes de septiembre.</p>
+      <p>Acontecimientos históricos destacados del mes de septiembre.</p>
     </div>
 
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <span class="timeline-date">30 de Septiembre, 1765</span>
-          <p>Nacimiento de José María Morelos y Pavón, el "Siervo de la Nación" y organizador clave del movimiento insurgente.</p>
-        </div>
+        <span class="timeline-date">30 de Septiembre, 1765</span>
+        <p>Nacimiento de José María Morelos y Pavón, el "Siervo de la Nación" y organizador clave del movimiento insurgente.</p>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <span class="timeline-date">15 de Septiembre, 1810</span>
-          <p>Se realiza el histórico Grito de Dolores durante la madrugada, convocando al pueblo a tomar las armas.</p>
-        </div>
+        <span class="timeline-date">15 de Septiembre, 1810</span>
+        <p>Se realiza el histórico Grito de Dolores durante la madrugada, convocando al pueblo a tomar las armas.</p>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <span class="timeline-date">16 de Septiembre, 1810</span>
-          <p>Inicio oficial de la lucha armada por la Independencia encabezada por Miguel Hidalgo y Costilla.</p>
-        </div>
+        <span class="timeline-date">16 de Septiembre, 1810</span>
+        <p>Inicio oficial de la lucha armada por la Independencia encabezada por Miguel Hidalgo y Costilla.</p>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <span class="timeline-date">14 de Septiembre, 1813</span>
-          <p>Presentación de los "Sentimientos de la Nación" en Chilpancingo, documento precursor de los derechos sociales e igualdad.</p>
-        </div>
+        <span class="timeline-date">14 de Septiembre, 1813</span>
+        <p>Presentación de los "Sentimientos de la Nación" en Chilpancingo, documento precursor de los derechos sociales e igualdad.</p>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <span class="timeline-date">13 de Septiembre, 1847</span>
-          <p>Gesta heroica de la Batalla de Chapultepec en defensa del Castillo frente a las fuerzas invasoras.</p>
-        </div>
+        <span class="timeline-date">13 de Septiembre, 1847</span>
+        <p>Gesta heroica de la Batalla de Chapultepec en defensa del Castillo frente a las fuerzas invasoras.</p>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <span class="timeline-date">27 de Septiembre, 1821</span>
-          <p>Entrada triunfal del Ejército Trigarante a la Ciudad de México y consumación formal de la Independencia.</p>
-        </div>
+        <span class="timeline-date">27 de Septiembre, 1821</span>
+        <p>Entrada triunfal del Ejército Trigarante a la Ciudad de México y consumación formal de la Independencia.</p>
       </div>
     </div>
   </section>
@@ -544,12 +317,12 @@
   <section id="personajes">
     <div class="section-header">
       <h2 class="section-title">Personajes Ilustres</h2>
-      <p style="color: #666;">Líderes e ideólogos clave en la historia del movimiento independentista.</p>
+      <p>Líderes e ideólogos clave en la historia del movimiento independentista.</p>
     </div>
 
     <div class="grid-personajes">
       <div class="personaje-card">
-        <img src="02.png" alt="Miguel Hidalgo" class="personaje-img mirar-derecha">
+        <img src="02.png" alt="Miguel Hidalgo" class="personaje-img">
         <span class="badge-role">Padre de la Patria</span>
         <h3>Miguel Hidalgo</h3>
         <p>Inició la gesta independentista en 1810 convocando al pueblo al levantamiento armado por la libertad.</p>
@@ -588,7 +361,7 @@
   <section id="curiosidades">
     <div class="section-header">
       <h2 class="section-title">Datos Curiosos y Mitos</h2>
-      <p style="opacity: 0.9;">Aspectos poco conocidos e interpretaciones históricas sobre las fiestas patrias.</p>
+      <p>Aspectos poco conocidos e interpretaciones históricas sobre las fiestas patrias.</p>
     </div>
 
     <div class="curiosidades-container">
@@ -623,16 +396,8 @@
     </div>
   </section>
 
-  <footer style="
-    background-color: #000000; 
-    color: #ffffff; 
-    text-align: center; 
-    padding: 20px; 
-    font-size: 1.1rem; 
-    font-weight: bold;
-    border-top: 3px solid #f4d03f;
-  ">
-    Betancourt Basurto Juan Alberto/ 0503/ 5ºI
+  <footer>
+    Betancourt Basurto Juan Alberto / 0503 / 5ºI
   </footer>
 
 </body>
