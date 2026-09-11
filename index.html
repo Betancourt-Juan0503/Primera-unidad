@@ -7,8 +7,8 @@
   <style>
 
     #inicio {
-  background: linear-gradient(to right, #006837 0%, #a2d2a7 20%, #ffffff 50%, #f1a3ad 80%, #c8102e 100%) !important;
-}
+      background: linear-gradient(to right, #006837 0%, #a2d2a7 20%, #ffffff 50%, #f1a3ad 80%, #c8102e 100%) !important;
+    }
     :root {
       --verde-patrio: #005a36;
       --verde-oscuro: #003822;
@@ -17,7 +17,7 @@
       --dorado: #f4d03f;
       --blanco: #ffffff;
       --gris-claro: #f8f9fa;
-      --texto-oscuro: #2b2b2b;
+      --texto-oscuro: #FFFFFF;
     }
 
     * {
@@ -45,11 +45,18 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
+    .navbar .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
     .navbar .logo {
       color: var(--dorado);
       font-size: 1.3rem;
       font-weight: bold;
       letter-spacing: 1.5px;
+      margin-right: 2px;
     }
 
     .nav-links {
@@ -273,21 +280,11 @@
       border-radius: 16px;
       padding: 25px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      border-top: 6px solid var(--verde-patrio);
-      transition: all 0.3s ease;
+      border-top: none;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-
-    .personaje-card:nth-child(even) {
-      border-top-color: var(--rojo-patrio);
-    }
-
-    .personaje-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
     .personaje-img {
@@ -317,8 +314,9 @@
 
     .personaje-card h3 {
       font-size: 1.4rem;
-      color: var(--texto-oscuro);
+      color: #2b2b2b !important;
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .personaje-card p {
@@ -384,7 +382,7 @@
       padding: 12px;
       border-radius: 8px;
       margin-bottom: 15px;
-      border-left: 4px solid var(--dorado);
+      border-left: none;
     }
 
     .mito-tag strong {
@@ -420,7 +418,10 @@
 <body>
 
   <nav class="navbar">
-    <div class="logo">MES PATRIO</div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div class="logo">MES PATRIO</div>
+      <img src="01.png" alt="Bandera de México" style="height: 22px; width: auto; border-radius: 2px;">
+    </div>
     <div class="nav-links">
       <a href="#fechas" class="nav-btn">Fechas Importantes</a>
       <a href="#personajes" class="nav-btn">Personajes Ilustres</a>
@@ -430,18 +431,55 @@
 
   <section id="inicio">
     <div class="section-header">
-      <img src="01.png" alt="Bandera de México" class="section-img" style="max-width: 380px; margin-bottom: 20px;">
+      <img src="07.png" alt="Escudo de México" style="max-width: 180px; margin-bottom: 10px; mix-blend-mode: multiply; box-shadow: none; border-radius: 0;">
       
       <h1 class="section-title">Mes Patrio</h1>
 
       <p class="intro-text" style="font-size: 1.1rem; line-height: 1.6; color: #000000; font-weight: 700; margin-bottom: 45px; max-width: 800px;">
         Septiembre es conocido como el Mes Patrio en México, ya que durante este periodo se conmemoran acontecimientos fundamentales relacionados con la lucha por la Independencia y la soberanía del país. Es un momento para recordar a los héroes nacionales y celebrar los valores, tradiciones e identidad que nos unen.
       </p>
-      
-      <div class="hero-actions">
-        <a href="#fechas" class="cta-button">Fechas Importantes</a>
-        <a href="#personajes" class="cta-button">Personajes Ilustres</a>
-        <a href="#curiosidades" class="cta-button">Datos Curiosos y Mitos</a>
+      <div class="hero-actions" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; width: 100%;">
+  
+        <a href="#fechas" class="cta-button" style="
+          background-color: #006837; 
+          color: #ffffff; 
+          padding: 14px 28px; 
+          border-radius: 30px; 
+          text-decoration: none; 
+          font-weight: 800; 
+          font-size: 1rem; 
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        ">
+          Fechas Importantes
+        </a>
+
+        <a href="#personajes" class="cta-button" style="
+          background-color: #ffffff; 
+          color: #111111; 
+          padding: 14px 28px; 
+          border-radius: 30px; 
+          text-decoration: none; 
+          font-weight: 800; 
+          font-size: 1rem; 
+          border: 2px solid #cccccc; 
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        ">
+          Personajes Ilustres
+        </a>
+
+        <a href="#curiosidades" class="cta-button" style="
+          background-color: #c8102e; 
+          color: #ffffff; 
+          padding: 14px 28px; 
+          border-radius: 30px; 
+          text-decoration: none; 
+          font-weight: 800; 
+          font-size: 1rem; 
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        ">
+          Datos Curiosos y Mitos
+        </a>
+
       </div>
     </div>
   </section>
@@ -594,7 +632,7 @@
     font-weight: bold;
     border-top: 3px solid #f4d03f;
   ">
-    Betancourt Basurto Juan Alberto 5ºI
+    Betancourt Basurto Juan Alberto/ 0503/ 5ºI
   </footer>
 
 </body>
