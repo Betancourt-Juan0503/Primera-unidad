@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes Patrio - Historia y Tradición</title>
+  
+  <!-- Estilos CSS para el diseño de la página -->
   <style>
+    /* tipografía general */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,9 +16,10 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: smooth; /* Desplazamiento al hacer clic en los enlaces del menú */
     }
 
+    /* Barra de navegación fija en la parte superior */
     .navbar {
       position: fixed;
       top: 0;
@@ -46,6 +50,7 @@
       border: 1px solid #ffffff;
     }
 
+    /* Estilo base para todas las secciones principales */
     section {
       min-height: 100vh;
       padding: 100px 20px 60px 20px;
@@ -67,6 +72,7 @@
       margin-bottom: 15px;
     }
 
+    /* Sección Inicio */
     #inicio {
       background: #006837;
       color: #ffffff;
@@ -98,6 +104,7 @@
       font-size: 1rem;
     }
 
+    /* Sección Fechas Importantes */
     #fechas {
       background: #003822;
       color: #ffffff;
@@ -127,6 +134,7 @@
       display: block;
     }
 
+    /* Sección Personajes */
     #personajes {
       background-color: #f4f4f4;
       color: #2b2b2b;
@@ -182,6 +190,7 @@
       line-height: 1.5;
     }
 
+    /* Sección Curiosidades y Mitos */
     #curiosidades {
       background: #c8102e;
       color: #ffffff;
@@ -225,6 +234,7 @@
       margin-bottom: 5px;
     }
 
+    /* Pie de página */
     footer {
       background-color: #000000;
       color: #ffffff;
@@ -235,6 +245,7 @@
       border-top: 3px solid #f4d03f;
     }
 
+    /* Adaptación para pantallas pequeñas */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -246,6 +257,7 @@
 </head>
 <body>
 
+  <!-- Barra superior con el nombre del sitio y botones de navegación -->
   <nav class="navbar">
     <div style="display: flex; align-items: center; gap: 8px;">
       <div class="logo">MES PATRIO</div>
@@ -258,6 +270,7 @@
     </div>
   </nav>
 
+  <!-- Sección principal / Bienvenida -->
   <section id="inicio">
     <div class="section-header">
       <img src="07.png" alt="Escudo de México" style="max-width: 150px; margin-bottom: 10px;">
@@ -267,6 +280,7 @@
       <p class="intro-text">
         Septiembre es conocido como el Mes Patrio en México, ya que durante este periodo se conmemoran acontecimientos fundamentales relacionados con la lucha por la Independencia y la soberanía del país. Es un momento para recordar a los héroes nacionales y celebrar los valores, tradiciones e identidad que nos unen.
       </p>
+      <!-- Botones de acceso rápido a cada sección -->
       <div class="hero-actions">
         <a href="#fechas" class="cta-button" style="background-color: #003822; color: #ffffff;">Fechas Importantes</a>
         <a href="#personajes" class="cta-button" style="background-color: #ffffff; color: #111111;">Personajes Ilustres</a>
@@ -275,6 +289,7 @@
     </div>
   </section>
 
+  <!-- Sección de cronología con las fechas clave -->
   <section id="fechas">
     <div class="section-header">
       <h2 class="section-title">Fechas Importantes</h2>
@@ -314,6 +329,7 @@
     </div>
   </section>
 
+  <!-- Sección con fichas informativas de los héroes de la Patria -->
   <section id="personajes">
     <div class="section-header">
       <h2 class="section-title">Personajes Ilustres</h2>
@@ -358,6 +374,7 @@
     </div>
   </section>
 
+  <!-- Sección de información extra: Datos curiosos y Mitos -->
   <section id="curiosidades">
     <div class="section-header">
       <h2 class="section-title">Datos Curiosos y Mitos</h2>
@@ -396,6 +413,7 @@
     </div>
   </section>
 
+  <!-- Pie de página con datos del alumno -->
   <footer>
     Betancourt Basurto Juan Alberto / 0503 / 5ºI
   </footer>
