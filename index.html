@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mes Patrio - Historia y Tradición</title>
+  <title>Mes Patrio - Inicio</title>
   
   <style>
     /* remueve márgenes y rellenos por defecto del navegador */
@@ -103,136 +103,6 @@
       font-size: 1rem;
     }
 
-    /* Sección Fechas Importantes */
-    #fechas {
-      background: #003822;
-      color: #ffffff;
-    }
-
-    #fechas .section-title {
-      color: #f4d03f;
-    }
-
-    .timeline {
-      max-width: 800px;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .timeline-item {
-      margin-bottom: 25px;
-      border-left: 4px solid #f4d03f; /* Crea la línea vertical dorada a la izquierda */
-      padding-left: 20px;
-    }
-
-    .timeline-date {
-      color: #f4d03f;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-      display: block; /* Obliga a la fecha a comportarse como bloque y saltar de línea */
-    }
-
-    /* Sección Personajes */
-    #personajes {
-      background-color: #f4f4f4;
-      color: #2b2b2b;
-    }
-
-    #personajes .section-title {
-      color: #006837;
-    }
-
-    .grid-personajes {
-      display: flex;
-      flex-wrap: wrap; /* Acomoda las tarjetas en varias filas según quepan */
-      justify-content: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 1100px;
-    }
-
-    .personaje-card {
-      background: #ffffff;
-      padding: 20px;
-      border: 1px solid #ccc;
-      width: 250px;
-      text-align: center;
-    }
-
-    .personaje-img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover; /* Recorta la imagen para que llene el recuadro sin deformarse ni estirarse */
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-    }
-
-    .badge-role {
-      font-size: 0.8rem;
-      font-weight: bold;
-      color: #c8102e;
-      margin-bottom: 10px;
-      display: block;
-      text-transform: uppercase; /* Pone la etiqueta del rol en mayúsculas */
-    }
-
-    .personaje-card h3 {
-      font-size: 1.3rem;
-      color: #2b2b2b;
-      margin-bottom: 10px;
-    }
-
-    .personaje-card p {
-      color: #444;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    /* Sección Curiosidades */
-    #curiosidades {
-      background: #c8102e;
-      color: #ffffff;
-    }
-
-    .curiosidades-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      width: 100%;
-      max-width: 1100px;
-    }
-
-    .panel-box {
-      width: 300px;
-    }
-
-    .panel-box h3 {
-      font-size: 1.5rem;
-      color: #f4d03f;
-      margin-bottom: 15px;
-    }
-
-    .info-list {
-      padding-left: 20px; /* Deja espacio a la izquierda para las viñetas de la lista */
-    }
-
-    .info-list li {
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
-
-    .mito-tag {
-      margin-bottom: 20px;
-    }
-
-    .mito-tag strong {
-      color: #f4d03f;
-      display: block;
-      margin-bottom: 5px;
-    }
-
     /* Pie de página */
     footer {
       background-color: #000000;
@@ -249,13 +119,13 @@
 
   <nav class="navbar">
     <div style="display: flex; align-items: center; gap: 8px;">
-      <div class="logo">MES PATRIO</div>
+      <a href="index.html" class="logo" style="text-decoration: none;">MES PATRIO</a>
       <img src="01.png" alt="Bandera de México" style="height: 22px; width: auto;">
     </div>
     <div class="nav-links">
-      <a href="#fechas" class="nav-btn">Fechas Importantes</a>
-      <a href="#personajes" class="nav-btn">Personajes Ilustres</a>
-      <a href="#curiosidades" class="nav-btn">Datos Curiosos y Mitos</a>
+      <a href="fechas.html" class="nav-btn">Fechas Importantes</a>
+      <a href="personajes.html" class="nav-btn">Personajes Ilustres</a>
+      <a href="curiosidades.html" class="nav-btn">Datos Curiosos y Mitos</a>
     </div>
   </nav>
 
@@ -264,140 +134,14 @@
       <img src="07.png" alt="Escudo de México" style="max-width: 150px; margin-bottom: 10px;">
       
       <h1 class="section-title">Mes Patrio</h1>
-
-      <!-- Introduccion de la pagina web -->
+      
       <p class="intro-text">
         Septiembre es conocido como el Mes Patrio en México, ya que durante este periodo se conmemoran acontecimientos fundamentales relacionados con la lucha por la Independencia y la soberanía del país. Es un momento para recordar a los héroes nacionales y celebrar los valores, tradiciones e identidad que nos unen.
       </p>
-      <div class="hero-actions"> <!-- Botones para moverse a travez de la pagina -->
-        <a href="#fechas" class="cta-button" style="background-color: #003822; color: #ffffff;">Fechas Importantes</a> <!-- Botones y color de botones -->
-        <a href="#personajes" class="cta-button" style="background-color: #ffffff; color: #111111;">Personajes Ilustres</a>
-        <a href="#curiosidades" class="cta-button" style="background-color: #c8102e; color: #ffffff;">Datos Curiosos y Mitos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- IFechas importantes (linea del tiempo) -->
-  <section id="fechas">
-    <div class="section-header">
-      <h2 class="section-title">Fechas Importantes</h2>
-      <p>Acontecimientos históricos destacados del mes de septiembre.</p>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-date">30 de Septiembre, 1765</span>
-        <p>Nacimiento de José María Morelos y Pavón, el "Siervo de la Nación" y organizador clave del movimiento insurgente.</p>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">15 de Septiembre, 1810</span>
-        <p>Se realiza el histórico Grito de Dolores durante la madrugada, convocando al pueblo a tomar las armas.</p>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">16 de Septiembre, 1810</span>
-        <p>Inicio oficial de la lucha armada por la Independencia encabezada por Miguel Hidalgo y Costilla.</p>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">14 de Septiembre, 1813</span>
-        <p>Presentación de los "Sentimientos de la Nación" en Chilpancingo, documento precursor de los derechos sociales e igualdad.</p>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">13 de Septiembre, 1847</span>
-        <p>Gesta heroica de la Batalla de Chapultepec en defensa del Castillo frente a las fuerzas invasoras.</p>
-      </div>
-
-      <div class="timeline-item">
-        <span class="timeline-date">27 de Septiembre, 1821</span>
-        <p>Entrada triunfal del Ejército Trigarante a la Ciudad de México y consumación formal de la Independencia.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seccion de personajes del mes-->
-  <section id="personajes">
-    <div class="section-header">
-      <h2 class="section-title">Personajes Ilustres</h2>
-      <p>Líderes e ideólogos clave en la historia del movimiento independentista.</p>
-    </div>
-
-    <div class="grid-personajes">
-      <div class="personaje-card">
-        <img src="02.png" alt="Miguel Hidalgo" class="personaje-img"> 
-        <span class="badge-role">Padre de la Patria</span>
-        <h3>Miguel Hidalgo</h3>
-        <p>Inició la gesta independentista en 1810 convocando al pueblo al levantamiento armado por la libertad.</p>
-      </div>
-
-      <div class="personaje-card">
-        <img src="03.png" alt="José María Morelos" class="personaje-img">
-        <span class="badge-role">Estratega e Ideólogo</span>
-        <h3>José María Morelos</h3>
-        <p>Líder militar que le dio estructura política e institucional a la revolución con los Sentimientos de la Nación.</p>
-      </div>
-
-      <div class="personaje-card">
-        <img src="04.png" alt="Ignacio Allende" class="personaje-img">
-        <span class="badge-role">Líder Militar</span>
-        <h3>Ignacio Allende</h3>
-        <p>Capitán del ejército que coordinó las estrategias militares iniciales de la lucha insurgente.</p>
-      </div>
-
-      <div class="personaje-card">
-        <img src="05.png" alt="Vicente Guerrero" class="personaje-img">
-        <span class="badge-role">Consumador</span>
-        <h3>Vicente Guerrero</h3>
-        <p>Insurgente que mantuvo viva la resistencia armada en el sur y pactó la consumación de la Independencia.</p>
-      </div>
-
-      <div class="personaje-card">
-        <img src="06.png" alt="Josefa Ortiz de Domínguez" class="personaje-img">
-        <span class="badge-role">La Corregidora</span>
-        <h3>Josefa Ortiz de Domínguez</h3>
-        <p>Pieza clave de la conspiración de Querétaro que envió el aviso oportuno cuando la causa fue descubierta.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Seccion de las curiosidades -->
-  <section id="curiosidades">
-    <div class="section-header">
-      <h2 class="section-title">Datos Curiosos y Mitos</h2>
-      <p>Aspectos poco conocidos e interpretaciones históricas sobre las fiestas patrias.</p>
-    </div>
-
-    <div class="curiosidades-container">
-      <div class="panel-box"> <!-- Agrupa los datos para que quepan -->
-        <h3>Datos Curiosos</h3>
-        <ul class="info-list">
-          <li>El Grito original se dio en la madrugada del 16 de septiembre, aunque por tradición oficial se realiza la noche del 15.</li>
-          <li>Los tres colores de la bandera representaban originalmente: Verde (Independencia), Blanco (Religión) y Rojo (Unión).</li>
-          <li>Los chiles en nogada llevan los colores patrios y fueron servidos en Puebla en honor a la entrada de Agustín de Iturbide.</li>
-          <li>El Ángel de la Independencia en su base una cripta con los restos de los principales héroes insurgentes.</li>
-        </ul>
-      </div>
-
-      <div class="panel-box">
-        <h3>Mitos y Realidades</h3>
-        
-        <div class="mito-tag">
-          <strong>Mito: Hidalgo tocó él mismo la campana.</strong>
-          <p>Realidad: Hidalgo convocó al pueblo, pero fue el campanero José José Galván quien la hizo sonar físicamente.</p>
-        </div>
-
-        <div class="mito-tag">
-          <strong>Mito: La Independencia se logró en 1810.</strong>
-          <p>Realidad: En 1810 inició el movimiento; la guerra duró 11 años hasta su consumación el 27 de septiembre de 1821.</p>
-        </div>
-
-        <div class="mito-tag">
-          <strong>Mito: Todos luchaban con la misma visión.</strong>
-          <p>Realidad: Existieron marcadas diferencias políticas sobre cómo debía estructurarse el nuevo gobierno del país.</p>
-        </div>
+      <div class="hero-actions"> 
+        <a href="fechas.html" class="cta-button" style="background-color: #003822; color: #ffffff;">Fechas Importantes</a> <!-- Botones y color de botones -->
+        <a href="personajes.html" class="cta-button" style="background-color: #ffffff; color: #111111;">Personajes Ilustres</a>
+        <a href="curiosidades.html" class="cta-button" style="background-color: #c8102e; color: #ffffff;">Datos Curiosos y Mitos</a>
       </div>
     </div>
   </section>
