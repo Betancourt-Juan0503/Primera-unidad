@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Patrio - Datos Curiosos y Mitos</title>
+  
+  <style>
+    /* remueve márgenes y rellenos por defecto del navegador */
+    * {
+      box-sizing: border-box; /* Incluye border y padding en el ancho total del elemento */
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Hace que el desplazamiento al hacer clic en enlaces sea suave */
+    }
+
+    /* Barra de navegación superior */
+    .navbar {
+      position: fixed; /* Mantiene la barra fija arriba incluso al deslizar la página */
+      top: 0;
+      width: 100%;
+      background: #000000;
+      display: flex; /* Convierte el contenedor en flexible para alinear elementos en línea */
+      justify-content: space-between; /* Separa el logo a la izquierda y enlaces a la derecha */
+      align-items: center; /* Alinea los elementos verticalmente al centro */
+      padding: 15px 30px;
+    }
+
+    .navbar .logo {
+      color: #f4d03f;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px; /* Crea un espacio automático de 15px entre cada enlace */
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      text-decoration: none; /* Quita el subrayado azul que traen los enlaces por defecto */
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: 1px solid #ffffff; /* Le agrega un borde blanco delgado alrededor */
+    }
+
+    /* Secciones generales */
+    section {
+      min-height: 100vh; /* Obliga a la sección a medir mínimo el 100% del alto de la pantalla */
+      padding: 100px 20px 60px 20px;
+      display: flex;
+      flex-direction: column; /* Organiza los datos de arriba hacia abajo */
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-transform: uppercase; /* Convierte todo el texto del título a mayusculas */
+      margin-bottom: 15px;
+    }
+
+    /* Sección Curiosidades */
+    #curiosidades {
+      background: #c8102e;
+      color: #ffffff;
+    }
+
+    .curiosidades-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .panel-box {
+      width: 300px;
+    }
+
+    .panel-box h3 {
+      font-size: 1.5rem;
+      color: #f4d03f;
+      margin-bottom: 15px;
+    }
+
+    .info-list {
+      padding-left: 20px; /* Deja espacio a la izquierda para las viñetas de la lista */
+    }
+
+    .info-list li {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .mito-tag {
+      margin-bottom: 20px;
+    }
+
+    .mito-tag strong {
+      color: #f4d03f;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-top: 3px solid #f4d03f; /* Línea decorativa dorada en el borde superior */
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <a href="index.html" class="logo" style="text-decoration: none;">MES PATRIO</a>
+      <img src="01.png" alt="Bandera de México" style="height: 22px; width: auto;">
+    </div>
+    <div class="nav-links">
+      <a href="fechas.html" class="nav-btn">Fechas Importantes</a>
+      <a href="personajes.html" class="nav-btn">Personajes Ilustres</a>
+      <a href="curiosidades.html" class="nav-btn">Datos Curiosos y Mitos</a>
+    </div>
+  </nav>
+
+
+  <section id="curiosidades">
+    <div class="section-header">
+      <h2 class="section-title">Datos Curiosos y Mitos</h2>
+      <p>Aspectos poco conocidos e interpretaciones históricas sobre las fiestas patrias.</p>
+    </div>
+
+    <div class="curiosidades-container">
+      <div class="panel-box"> 
+        <h3>Datos Curiosos</h3>
+        <ul class="info-list">
+          <li>El Grito original se dio en la madrugada del 16 de septiembre, aunque por tradición oficial se realiza la noche del 15.</li>
+          <li>Los tres colores de la bandera representaban originalmente: Verde (Independencia), Blanco (Religión) y Rojo (Unión).</li>
+          <li>Los chiles en nogada llevan los colores patrios y fueron servidos en Puebla en honor a la entrada de Agustín de Iturbide.</li>
+          <li>El Ángel de la Independencia en su base una cripta con los restos de los principales héroes insurgentes.</li>
+        </ul>
+      </div>
+
+      <div class="panel-box">
+        <h3>Mitos y Realidades</h3>
+        
+        <div class="mito-tag">
+          <strong>Mito: Hidalgo tocó él mismo la campana.</strong>
+          <p>Realidad: Hidalgo convocó al pueblo, pero fue el campanero José José Galván quien la hizo sonar físicamente.</p>
+        </div>
+
+        <div class="mito-tag">
+          <strong>Mito: La Independencia se logró en 1810.</strong>
+          <p>Realidad: En 1810 inició el movimiento; la guerra duró 11 años hasta su consumación el 27 de septiembre de 1821.</p>
+        </div>
+
+        <div class="mito-tag">
+          <strong>Mito: Todos luchaban con la misma visión.</strong>
+          <p>Realidad: Existieron marcadas diferencias políticas sobre cómo debía estructurarse el nuevo gobierno del país.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de pagina con datos del alumno -->
+  <footer>
+    Betancourt Basurto Juan Alberto / 0503 / 5ºI
+  </footer>
+
+</body>
+</html>
