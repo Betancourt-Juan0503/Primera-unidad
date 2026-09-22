@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personajes Ilustres - Mes Patrio</title>
   <style>
+    /* Configuración básica para toda la página */
     * {
       box-sizing: border-box; /* Incluye el borde y relleno en el tamaño total */
       margin: 0; /* Quita los espacios vacíos de afuera */
@@ -58,9 +59,10 @@
       text-transform: uppercase; /* Pone todo en mayúsculas */
       margin-bottom: 30px; /* Espacio vacio debajo del título */
     }
-    /* Contenedor que agrupa las tarjetas de los personajes */
+    /* Contenedor que agrupa las tarjetas y acomoda abajo las sobrantes */
     .personajes-container {
-      display: flex; /* Acomoda las tarjetas una al lado de otra */
+      display: flex; /* Acomoda las tarjetas de lado */
+      flex-wrap: wrap; /* Pasa las tarjetas abajo si no caben en una sola fila */
       gap: 20px; /* Espacio de separación entre tarjetas */
       justify-content: center; /* Mantiene centradas las tarjetas */
       max-width: 1100px; /* Límite de ancho para que no se estiren de más */
@@ -71,12 +73,12 @@
       background: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
       border: 1px solid #f4d03f; /* Marco o borde dorado alrededor de la tarjeta */
       padding: 20px; /* Espacio interno para que el texto no toque el borde */
-      flex: 1; /* Hace que todas las tarjetas tengan el mismo ancho */
+      flex: 1 1 220px; /* Tamaño adaptable para formar filas equilibradas */
     }
     /* Imagen del personaje dentro de la tarjeta */
     .personaje-card img {
-      width: 120px; /* Ancho fijo para la foto */
-      height: 120px; /* Alto fijo para la foto */
+      width: 110px; /* Ancho fijo para la foto */
+      height: 110px; /* Alto fijo para la foto */
       object-fit: cover; /* Ajusta la imagen dentro de la foto sin deformarla */
       border-radius: 50%; /* Hace que la imagen sea circular */
       border: 2px solid #f4d03f; /* Borde dorado alrededor de la foto */
@@ -85,13 +87,13 @@
     /* Nombre del personaje */
     .personaje-card h2 {
       color: #f4d03f; /* Texto dorado */
-      font-size: 1.4rem; /* Tamaño de letra mediano */
+      font-size: 1.3rem; /* Tamaño de letra mediano */
       margin-bottom: 10px; /* Espacio vacio por debajo */
     }
     /* Texto con la biografía del personaje */
     .personaje-card p {
-      font-size: 0.95rem; /* Tamaño de letra legible */
-      line-height: 1.5; /* Separación entre renglones */
+      font-size: 0.9rem; /* Tamaño de letra legible */
+      line-height: 1.4; /* Separación entre renglones */
     }
     /* Pie de página */
     footer {
@@ -125,24 +127,30 @@
   <section id="personajes">
     <h1>Personajes Ilustres</h1>
     
-    <!-- Contenedor de las tarjetas con la información de los héroes -->
+    <!-- Contenedor con las tarjetas de los héroes -->
     <div class="personajes-container">
       <div class="personaje-card">
         <img src="02.png" alt="Miguel Hidalgo">
         <h2>Miguel Hidalgo y Costilla</h2>
-        <p>Conocido como el Padre de la Patria. Sacerdote y militar insurgente que dio el Grito de Dolores iniciando el movimiento de Independencia.</p>
+        <p>Iniciador de la lucha por la Independencia y conocido como el Padre de la Patria.</p>
       </div>
 
       <div class="personaje-card">
         <img src="03.png" alt="Josefa Ortiz">
         <h2>Josefa Ortiz de Domínguez</h2>
-        <p>La Corregidora de Querétaro. Pieza clave en la conspiración que avisó a los insurgentes que la lucha debía adelantarse.</p>
+        <p>La Corregidora de Querétaro, pieza clave en la conspiración que dio origen a la lucha.</p>
       </div>
 
       <div class="personaje-card">
         <img src="04.png" alt="José María Morelos">
         <h2>José María Morelos y Pavón</h2>
-        <p>El Siervo de la Nación. LÍder militar e ideólogo que redactó los "Sentimientos de la Nación" definiendo la soberanía del país.</p>
+        <p>Líder militar e ideólogo del movimiento, autor de los Sentimientos de la Nación.</p>
+      </div>
+
+      <div class="personaje-card">
+        <img src="05.png" alt="Ignacio Allende">
+        <h2>Ignacio Allende</h2>
+        <p>Militar insurgente que lideró las primeras etapas de la guerra de Independencia.</p>
       </div>
     </div>
   </section>
