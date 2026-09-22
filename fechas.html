@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fechas Importantes - Mes Patrio</title>
   <style>
+    /* Configuración básica para toda la página */
     * {
       box-sizing: border-box; /* Incluye el borde y relleno en el tamaño total */
       margin: 0; /* Quita los espacios vacíos de afuera */
@@ -60,7 +61,7 @@
     }
     /* Contenedor que agrupa todas las tarjetas de fechas */
     .fechas-container {
-      display: flex; /* Acomoda las tarjetas una al lado de otra */
+      display: flex; /* Acomoda las tarjetas */
       gap: 20px; /* Espacio de separación entre tarjetas */
       justify-content: center; /* Mantiene centradas las tarjetas */
       max-width: 1100px; /* Límite de ancho para que no se estiren de más */
@@ -68,7 +69,7 @@
     }
     /* Diseño de cada tarjeta de fecha */
     .fecha-card {
-      background: rgba(0, 0, 0, 0.4); /* Fondo negro */
+      background: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
       border: 1px solid #f4d03f; /* Marco o borde dorado alrededor de la tarjeta */
       padding: 20px; /* Espacio interno para que el texto no toque el borde */
       flex: 1; /* Hace que todas las tarjetas tengan el mismo ancho */
@@ -81,7 +82,7 @@
     }
     /* Texto descriptivo dentro de cada tarjeta */
     .fecha-card p {
-      font-size: 1rem; /* Tamaño de letra */
+      font-size: 1rem; /* Tamaño de letra legible */
       line-height: 1.5; /* Separación entre renglones */
     }
     /* Pie de página */
@@ -90,7 +91,7 @@
       padding: 20px; /* Espacio interno */
       font-size: 1.1rem; /* Tamaño de letra */
       font-weight: bold; /* Letra en negrita */
-      border-top: 3px solid #f4d03f; /* Línea dorada arriba */
+      border-top: 3px solid #f4d03f; /* Línea dorada en la parte superior */
     }
   </style>
 </head>
@@ -120,17 +121,22 @@
     <div class="fechas-container">
       <div class="fecha-card">
         <h2>13 de Septiembre</h2>
-        <p>Defensa del Castillo de Chapultepec por los Niños Héroes en 1847 durante la intervención estadounidense.</p>
+        <p>Gesta Heroica de los Niños Héroes en la defensa del Castillo de Chapultepec en 1847.</p>
       </div>
 
       <div class="fecha-card">
         <h2>15 de Septiembre</h2>
-        <p>Grito de Dolores encabezado por Miguel Hidalgo en 1810, marcando el inicio de la lucha por la Independencia.</p>
+        <p>Conmemoración del Grito de Independencia dado por Miguel Hidalgo en Dolores, Guanajuato.</p>
+      </div>
+
+      <div class="fecha-card">
+        <h2>16 de Septiembre</h2>
+        <p>Inicio formal de la lucha por la Independencia de México en 1810.</p>
       </div>
 
       <div class="fecha-card">
         <h2>27 de Septiembre</h2>
-        <p>Consumación de la Independencia de México en 1821 con la entrada del Ejército Trigarante a la Ciudad de México.</p>
+        <p>Consumación de la Independencia en 1821 con la entrada del Ejército Trigarante.</p>
       </div>
     </div>
   </section>
