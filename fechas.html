@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes Patrio - Fechas Importantes</title>
-  
   <style>
     * {
       box-sizing: border-box;
@@ -12,14 +11,11 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
-
     body {
       background-color: #003822;
       color: #ffffff;
       text-align: center;
     }
-
-    /* Barra de navegación */
     .navbar {
       position: fixed;
       top: 0;
@@ -31,57 +27,46 @@
       padding: 15px 30px;
       z-index: 1000;
     }
-
-    .navbar .logo {
+    .logo {
       color: #f4d03f;
       font-size: 1.3rem;
       font-weight: bold;
       text-decoration: none;
     }
-
     .nav-links {
       display: flex;
       list-style: none;
       gap: 15px;
     }
-
-    .nav-links li a {
+    .nav-links a {
       color: #ffffff;
       text-decoration: none;
       padding: 8px 16px;
       font-size: 0.9rem;
       border: 1px solid #ffffff;
-      display: inline-block;
     }
-
-    /* Sección Fechas */
     #fechas {
       min-height: 100vh;
-      padding: 100px 20px 60px 20px;
+      padding: 100px 20px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
-    #fechas h2 {
+    h2 {
       color: #f4d03f;
       font-size: 2.5rem;
       text-transform: uppercase;
       margin-bottom: 30px;
     }
-
     .timeline {
       max-width: 800px;
-      width: 100%;
       text-align: left;
     }
-
     .timeline-item {
       margin-bottom: 25px;
       border-left: 4px solid #f4d03f;
       padding-left: 20px;
     }
-
     .timeline-date {
       color: #f4d03f;
       font-weight: bold;
@@ -89,11 +74,8 @@
       display: block;
       margin-bottom: 5px;
     }
-
-    /* Pie de página */
     footer {
       background-color: #000000;
-      color: #ffffff;
       padding: 20px;
       font-size: 1.1rem;
       font-weight: bold;
@@ -103,13 +85,11 @@
 </head>
 <body>
 
-  <!-- Navegación compartida -->
   <nav class="navbar">
     <div style="display: flex; align-items: center; gap: 8px;">
       <a href="index.html" class="logo">MES PATRIO</a>
-      <img src="01.png" alt="Bandera de México" style="height: 22px; width: auto;">
+      <img src="01.png" alt="Bandera" style="height: 22px;">
     </div>
-    
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="fechas.html">Fechas Importantes</a></li>
@@ -118,39 +98,33 @@
     </ul>
   </nav>
 
-  <!-- Contenido de Fechas -->
   <section id="fechas">
     <h2>Fechas Importantes</h2>
 
     <div class="timeline">
       <div class="timeline-item">
         <span class="timeline-date">30 de Septiembre, 1765</span>
-        <p>Nacimiento de José María Morelos y Pavón, el "Siervo de la Nación" y organizador clave del movimiento insurgente.</p>
+        <p>Nacimiento de José María Morelos y Pavón, organizador clave del movimiento insurgente.</p>
       </div>
-
       <div class="timeline-item">
         <span class="timeline-date">15 de Septiembre, 1810</span>
-        <p>Se realiza el histórico Grito de Dolores durante la madrugada, convocando al pueblo a tomar las armas.</p>
+        <p>Se realiza el histórico Grito de Dolores durante la madrugada.</p>
       </div>
-
       <div class="timeline-item">
         <span class="timeline-date">16 de Septiembre, 1810</span>
-        <p>Inicio oficial de la lucha armada por la Independencia encabezada por Miguel Hidalgo y Costilla.</p>
+        <p>Inicio oficial de la lucha armada por la Independencia encabezada por Miguel Hidalgo.</p>
       </div>
-
       <div class="timeline-item">
         <span class="timeline-date">14 de Septiembre, 1813</span>
-        <p>Presentación de los "Sentimientos de la Nación" en Chilpancingo, documento precursor de los derechos sociales e igualdad.</p>
+        <p>Presentación de los "Sentimientos de la Nación" en Chilpancingo.</p>
       </div>
-
       <div class="timeline-item">
         <span class="timeline-date">13 de Septiembre, 1847</span>
-        <p>Gesta heroica de la Batalla de Chapultepec en defensa del Castillo frente a las fuerzas invasoras.</p>
+        <p>Gesta heroica de la Batalla de Chapultepec en defensa del Castillo.</p>
       </div>
-
       <div class="timeline-item">
         <span class="timeline-date">27 de Septiembre, 1821</span>
-        <p>Entrada triunfal del Ejército Trigarante a la Ciudad de México y consumación formal de la Independencia.</p>
+        <p>Entrada triunfal del Ejército Trigarante y consumación de la Independencia.</p>
       </div>
     </div>
   </section>
