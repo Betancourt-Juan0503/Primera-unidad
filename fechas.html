@@ -59,26 +59,21 @@
       text-transform: uppercase; /* Pone todo en mayúsculas */
       margin-bottom: 30px; /* Espacio vacio debajo del título */
     }
-    /* Contenedor que agrupa todas las tarjetas de fechas */
+    /* Contenedor que acomoda las tarjetas y pasa las demás abajo si no caben */
     .fechas-container {
-      display: flex; /* Acomoda las tarjetas */
-      flex-direction: column; /* Pone las filas una debajo de otra */
-      gap: 20px; /* Espacio de separación entre filas */
+      display: flex; /* Acomoda las tarjetas de lado */
+      flex-wrap: wrap; /* Pasa las tarjetas a la siguiente fila si no caben */
+      gap: 20px; /* Espacio de separación entre tarjetas */
+      justify-content: center; /* Mantiene centradas las tarjetas */
       max-width: 1100px; /* Límite de ancho para que no se estiren de más */
       margin: 0 auto; /* Centra el contenedor horizontalmente */
-    }
-    /* Filas de 3 tarjetas cada una */
-    .fechas-row {
-      display: flex; /* Acomoda las tarjetas de lado */
-      gap: 20px; /* Espacio entre tarjetas */
-      justify-content: center; /* Centra las tarjetas de la fila */
     }
     /* Diseño de cada tarjeta de fecha */
     .fecha-card {
       background: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
       border: 1px solid #f4d03f; /* Marco o borde dorado alrededor de la tarjeta */
       padding: 20px; /* Espacio interno para que el texto no toque el borde */
-      flex: 1; /* Hace que todas las tarjetas tengan el mismo ancho */
+      flex: 1 1 300px; /* Ancho flexible con mínimo de 300px para formar filas de 3 */
     }
     /* Título del día dentro de la tarjeta */
     .fecha-card h2 {
@@ -123,45 +118,37 @@
   <section id="fechas">
     <h1>Fechas Importantes</h1>
     
-    <!-- Contenedor con las 6 fechas divididas en 2 filas -->
+    <!-- Contenedor único con las 6 tarjetas completas -->
     <div class="fechas-container">
-      
-      <!-- Primera fila con 3 fechas -->
-      <div class="fechas-row">
-        <div class="fecha-card">
-          <h2>1 de Septiembre</h2>
-          <p>Inicio del Mes Patrio y fecha en la que tradicionalmente se rinde el Informe de Gobierno Presidencial en México.</p>
-        </div>
-
-        <div class="fecha-card">
-          <h2>13 de Septiembre</h2>
-          <p>Gesta Heroica de los Niños Héroes en la defensa del Castillo de Chapultepec durante la intervención estadounidense de 1847.</p>
-        </div>
-
-        <div class="fecha-card">
-          <h2>15 de Septiembre</h2>
-          <p>Conmemoración del Grito de Independencia dado por el cura Miguel Hidalgo y Costilla en Dolores, Guanajuato.</p>
-        </div>
+      <div class="fecha-card">
+        <h2>1 de Septiembre</h2>
+        <p>Inicio del Mes Patrio y fecha en la que tradicionalmente se rinde el Informe de Gobierno Presidencial en México.</p>
       </div>
 
-      <!-- Segunda fila con 3 fechas -->
-      <div class="fechas-row">
-        <div class="fecha-card">
-          <h2>16 de Septiembre</h2>
-          <p>Aniversario del Inicio de la Guerra de Independencia de México en 1810 y día del Desfile Militar nacional.</p>
-        </div>
-
-        <div class="fecha-card">
-          <h2>27 de Septiembre</h2>
-          <p>Consumación de la Independencia de México en 1821 con la entrada triunfal del Ejército Trigarante a la capital.</p>
-        </div>
-
-        <div class="fecha-card">
-          <h2>30 de Septiembre</h2>
-          <p>Nacimiento de José María Morelos y Pavón en 1765, uno de los caudillos más importantes del movimiento insurgente.</p>
-        </div>
+      <div class="fecha-card">
+        <h2>13 de Septiembre</h2>
+        <p>Gesta Heroica de los Niños Héroes en la defensa del Castillo de Chapultepec durante la intervención estadounidense de 1847.</p>
       </div>
 
+      <div class="fecha-card">
+        <h2>15 de Septiembre</h2>
+        <p>Conmemoración del Grito de Independencia dado por el cura Miguel Hidalgo y Costilla en Dolores, Guanajuato.</p>
+      </div>
+
+      <div class="fecha-card">
+        <h2>16 de Septiembre</h2>
+        <p>Aniversario del Inicio de la Guerra de Independencia de México en 1810 y día del Desfile Militar nacional.</p>
+      </div>
+
+      <div class="fecha-card">
+        <h2>27 de Septiembre</h2>
+        <p>Consumación de la Independencia de México en 1821 con la entrada triunfal del Ejército Trigarante a la capital.</p>
+      </div>
+
+      <div class="fecha-card">
+        <h2>30 de Septiembre</h2>
+        <p>Nacimiento de José María Morelos y Pavón en 1765, uno de los caudillos más importantes del movimiento insurgente.</p>
+      </div>
     </div>
   </section>
 
