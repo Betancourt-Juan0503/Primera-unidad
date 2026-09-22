@@ -5,53 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes Patrio - Inicio</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background: #006837; color: #fff; text-align: center; }
+    /* Configuración básica para toda la página */
+    * {
+      box-sizing: border-box; /* Incluye el borde y relleno en el tamaño total */
+      margin: 0; /* Quita los espacios vacíos de afuera */
+      padding: 0; /* Quita el relleno interno por defecto */
+    }
     
-    .navbar { position: fixed; top: 0; width: 100%; background: #000; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; }
-    .logo { color: #f4d03f; font-size: 1.3rem; font-weight: bold; text-decoration: none; }
-    .nav-links { display: flex; list-style: none; gap: 15px; }
-    .nav-links a { color: #fff; text-decoration: none; padding: 8px 16px; font-size: 0.9rem; border: 1px solid #fff; }
+    /* Estilos del fondo y texto de la página */
+    body {
+      background: #006837; /* Pone el fondo de color verde */
+      color: #fff; /* Pone la letra de color blanco */
+      text-align: center; /* Centra todo el texto */
+    }
 
-    #inicio { min-height: 100vh; padding: 100px 20px 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    #inicio h1 { color: #f4d03f; font-size: 3rem; text-transform: uppercase; margin-bottom: 15px; }
-    .intro-text { font-size: 1.1rem; line-height: 1.6; margin: 25px 0 40px; max-width: 800px; }
-    
-    .hero-actions { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
-    .cta-button { padding: 12px 24px; text-decoration: none; font-weight: bold; }
+    /* Barra de navegación fija arriba */
+    .navbar {
+      position: fixed; /* Se queda fija arriba al bajar la pantalla */
+      top: 0; /* Se ubica hasta arriba */
+      width: 100%; /* Ocupa todo el ancho */
+      background: #000; /* Fondo negro */
+      display: flex; /* Acomoda los elementos en fila */
+      justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
+      align-items: center; /* Centra las cosas de forma vertical */
+      padding: 15px 30px; /* Espacio interno arriba/abajo e izquierda/derecha */
+    }
 
-    footer { background: #000; padding: 20px; font-size: 1.1rem; font-weight: bold; border-top: 3px solid #f4d03f; }
+    /* Texto del logo MES PATRIO */
+    .logo {
+      color: #f4d03f; /* Letra dorada */
+      font-size: 1.3rem; /* Tamaño de letra un poco más grande */
+      font-weight: bold; /* Letra en negrita */
+      text-decoration: none; /* Quita la línea subrayada */
+    }
+
+    /* Lista que guarda los enlaces del menú */
+    .nav-links {
+      display: flex; /* Acomoda los enlaces uno al lado del otro */
+      list-style: none; /* Quita los puntos negros de la lista */
+      gap: 15px; /* Separa los enlaces entre sí */
+    }
+
+    /* Cada botón del menú */
+    .nav-links a {
+      color: #fff; /* Texto blanco */
+      text-decoration: none; /* Quita el subrayado */
+      padding: 8px 16px; /* Tamaño interno del botón */
+      font-size: 0.9rem; /* Letra más pequeña */
+      border: 1px solid #fff; /* Dibuja un cuadro blanco alrededor del botón */
+    }
+
+    /* Sección principal con todo el contenido del centro */
+    #inicio {
+      min-height: 100vh; /* Ocupa mínimo toda la altura de la pantalla */
+      padding: 100px 20px 60px; /* Espacio para que la barra de arriba no tape el texto */
+      display: flex; /* Ordena el contenido de forma flexible */
+      flex-direction: column; /* Pone un elemento debajo de otro */
+      align-items: center; /* Centra horizontalmente */
+      justify-content: center; /* Centra verticalmente */
+    }
+
+    /* Título principal de la página */
+    #inicio h1 {
+      color: #f4d03f; /* Texto dorado */
+      font-size: 3rem; /* Tamaño de letra grande */
+      text-transform: uppercase; /* Pone todo en mayúsculas */
+      margin-bottom: 15px; /* Separación con el texto de abajo */
+    }
+
+    /* Párrafo con la descripción */
+    .intro-text {
+      font-size: 1.1rem; /* Tamaño de letra */
+      line-height: 1.6; /* Espacio entre renglones */
+      margin: 25px 0 40px; /* Espacio arriba y abajo */
+      max-width: 800px; /* Límite de ancho para que no se estire de más */
+    }
+
+    /* Contenedor que agrupa los 3 botones principales */
+    .hero-actions {
+      display: flex; /* Acomoda los botones de lado */
+      gap: 15px; /* Espacio de separación entre botones */
+      justify-content: center; /* Mantiene centrados los botones */
+    }
+
+    /* Estilo base para los 3 botones principales */
+    .cta-button {
+      padding: 12px 24px; /* Tamaño del botón */
+      text-decoration: none; /* Quita el subrayado */
+      font-weight: bold; /* Letra en negrita */
+    }
+
+    /* Pie de página */
+    footer {
+      background: #000; /* Fondo negro */
+      padding: 20px; /* Espacio interno */
+      font-size: 1.1rem; /* Tamaño de letra */
+      font-weight: bold; /* Letra en negrita */
+      border-top: 3px solid #f4d03f; /* Línea dorada en la parte superior */
+    }
   </style>
 </head>
 <body>
 
+  <!-- Barra de navegación que se queda arriba -->
   <nav class="navbar">
+    <!-- Contenedor del logo con la bandera -->
     <div style="display: flex; align-items: center; gap: 8px;">
       <a href="index.html" class="logo">MES PATRIO</a>
       <img src="01.png" alt="Bandera" style="height: 22px;">
     </div>
+    <!-- links para moverse entre páginas -->
     <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="fechas.html">Fechas Importantes</a></li>
-      <li><a href="personajes.html">Personajes Ilustres</a></li>
-      <li><a href="curiosidades.html">Datos Curiosos y Mitos</a></li>
+      <li>
+        <a href="index.html">Inicio</a>
+      </li>
+      <li>
+        <a href="fechas.html">Fechas Importantes</a>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes Ilustres</a>
+      </li>
+      <li>
+        <a href="curiosidades.html">Datos Curiosos y Mitos</a>
+      </li>
     </ul>
   </nav>
 
+  <!-- Contenido principal de la página de inicio -->
   <section id="inicio">
     <img src="07.png" alt="Escudo" style="max-width: 150px; margin-bottom: 10px;">
     <h1>Mes Patrio</h1>
     <p class="intro-text">
       Septiembre es conocido como el Mes Patrio en México, ya que durante este periodo se conmemoran acontecimientos fundamentales relacionados con la lucha por la Independencia y la soberanía del país. Es un momento para recordar a los héroes nacionales y celebrar los valores, tradiciones e identidad que nos unen.
     </p>
+    <!-- Los tres botones para cambiar de página -->
     <div class="hero-actions">
-      <a href="fechas.html" class="cta-button" style="background: #003822; color: #fff;">Fechas Importantes</a>
-      <a href="personajes.html" class="cta-button" style="background: #fff; color: #111;">Personajes Ilustres</a>
-      <a href="curiosidades.html" class="cta-button" style="background: #c8102e; color: #fff;">Datos Curiosos y Mitos</a>
+      <a href="fechas.html" class="cta-button" style="background: #003822; color: #fff;">
+        Fechas Importantes
+      </a>
+      <a href="personajes.html" class="cta-button" style="background: #fff; color: #111;">
+        Personajes Ilustres
+      </a>
+      <a href="curiosidades.html" class="cta-button" style="background: #c8102e; color: #fff;">
+        Datos Curiosos y Mitos
+      </a>
     </div>
   </section>
 
-  <footer>Betancourt Basurto Juan Alberto / 0503 / 5ºI</footer>
+  <!-- Pie de página con los datos del alumno -->
+  <footer>
+    Betancourt Basurto Juan Alberto / 0503 / 5ºI
+  </footer>
 
 </body>
 </html>
