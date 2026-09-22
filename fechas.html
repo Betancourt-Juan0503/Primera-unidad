@@ -3,85 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mes Patrio - Fechas Importantes</title>
+  <title>Fechas Importantes - Mes Patrio</title>
   <style>
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      box-sizing: border-box; /* Incluye el borde y relleno en el tamaño total */
+      margin: 0; /* Quita los espacios vacíos de afuera */
+      padding: 0; /* Quita el relleno interno por defecto */
     }
+    /* Estilos del fondo y texto de la página */
     body {
-      background: #003822;
-      color: #fff;
-      text-align: center;
+      background: #006837; /* Fondo verde */
+      color: #fff; /* Texto en color blanco */
+      text-align: center; /* Centra todo el texto */
     }
-
-    /* Navegación */
+    /* Barra de navegación fija arriba */
     .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
+      position: fixed; /* Se queda fija arriba al bajar la pantalla */
+      width: 100%; /* Ocupa todo el ancho */
+      background: #000; /* Fondo negro */
+      display: flex; /* Acomoda los elementos en fila */
+      justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
+      padding: 15px 30px; /* Espacio interno arriba/abajo e izquierda/derecha */
     }
+    /* Texto del logo MES PATRIO */
     .logo {
-      color: #f4d03f;
-      font-weight: bold;
-      text-decoration: none;
+      color: #f4d03f; /* Letra dorada */
+      font-size: 1.3rem; /* Tamaño de letra un poco más grande */
+      font-weight: bold; /* Letra en negrita */
+      text-decoration: none; /* Quita la línea subrayada */
     }
+    /* Lista que guarda los enlaces del menú */
     .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 15px;
+      display: flex; /* Acomoda los enlaces uno al lado del otro */
+      list-style: none; /* Quita los puntos negros de la lista */
+      gap: 15px; /* Separa los enlaces entre sí */
     }
+    /* Cada botón del menú */
     .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 16px;
-      border: 1px solid #fff;
+      color: #fff; /* Texto blanco */
+      text-decoration: none; /* Quita el subrayado */
+      padding: 8px 16px; /* Tamaño interno del botón */
+      font-size: 0.9rem; /* Letra más pequeña */
+      border: 1px solid #fff; /* Dibuja un cuadro blanco alrededor del botón */
     }
-
-    /* Contenido */
+    /* Sección principal de fechas */
     #fechas {
-      padding: 100px 20px 60px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
+      min-height: 100vh; /* Ocupa mínimo toda la altura de la pantalla */
+      padding: 100px 20px 60px; /* Espacio arriba para que la barra no tape el contenido */
     }
-    #fechas h2 {
-      color: #f4d03f;
-      text-align: center;
-      margin-bottom: 30px;
+    /* Título principal de la sección */
+    #fechas h1 {
+      color: #f4d03f; /* Texto dorado */
+      font-size: 2.8rem; /* Tamaño de letra grande */
+      text-transform: uppercase; /* Pone todo en mayúsculas */
+      margin-bottom: 30px; /* Espacio vacio debajo del título */
     }
-    .timeline-item {
-      border-left: 4px solid #f4d03f;
-      padding-left: 15px;
-      margin-bottom: 20px;
+    /* Contenedor que agrupa todas las tarjetas de fechas */
+    .fechas-container {
+      display: flex; /* Acomoda las tarjetas una al lado de otra */
+      gap: 20px; /* Espacio de separación entre tarjetas */
+      justify-content: center; /* Mantiene centradas las tarjetas */
+      max-width: 1100px; /* Límite de ancho para que no se estiren de más */
+      margin: 0 auto; /* Centra el contenedor horizontalmente */
     }
-    .timeline-date {
-      color: #f4d03f;
-      font-weight: bold;
-      display: block;
+    /* Diseño de cada tarjeta de fecha */
+    .fecha-card {
+      background: rgba(0, 0, 0, 0.4); /* Fondo negro */
+      border: 1px solid #f4d03f; /* Marco o borde dorado alrededor de la tarjeta */
+      padding: 20px; /* Espacio interno para que el texto no toque el borde */
+      flex: 1; /* Hace que todas las tarjetas tengan el mismo ancho */
     }
-
+    /* Título del día dentro de la tarjeta */
+    .fecha-card h2 {
+      color: #f4d03f; /* Texto dorado */
+      font-size: 1.5rem; /* Tamaño de letra mediano */
+      margin-bottom: 10px; /* Espacio vacio por debajo */
+    }
+    /* Texto descriptivo dentro de cada tarjeta */
+    .fecha-card p {
+      font-size: 1rem; /* Tamaño de letra */
+      line-height: 1.5; /* Separación entre renglones */
+    }
+    /* Pie de página */
     footer {
-      background: #000;
-      padding: 20px;
-      text-align: center;
-      border-top: 3px solid #f4d03f;
+      background: #000; /* Fondo negro */
+      padding: 20px; /* Espacio interno */
+      font-size: 1.1rem; /* Tamaño de letra */
+      font-weight: bold; /* Letra en negrita */
+      border-top: 3px solid #f4d03f; /* Línea dorada arriba */
     }
   </style>
 </head>
 <body>
 
+  <!-- Barra de navegación que se queda arriba -->
   <nav class="navbar">
+    <!-- Contenedor del logo con la bandera -->
     <div style="display: flex; align-items: center; gap: 8px;">
       <a href="index.html" class="logo">MES PATRIO</a>
       <img src="01.png" alt="Bandera" style="height: 22px;">
     </div>
+    <!-- links para moverse entre páginas -->
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="fechas.html">Fechas Importantes</a></li>
@@ -90,36 +112,33 @@
     </ul>
   </nav>
 
+  <!-- Contenido principal de fechas importantes -->
   <section id="fechas">
-    <h2>Fechas Importantes</h2>
+    <h1>Fechas Importantes</h1>
+    
+    <!-- Contenedor de las tarjetas con información histórica -->
+    <div class="fechas-container">
+      <div class="fecha-card">
+        <h2>13 de Septiembre</h2>
+        <p>Defensa del Castillo de Chapultepec por los Niños Héroes en 1847 durante la intervención estadounidense.</p>
+      </div>
 
-    <div class="timeline-item">
-      <span class="timeline-date">30 de Septiembre, 1765</span>
-      <p>Nacimiento de José María Morelos y Pavón.</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">15 de Septiembre, 1810</span>
-      <p>Se realiza el histórico Grito de Dolores durante la madrugada.</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">16 de Septiembre, 1810</span>
-      <p>Inicio oficial de la lucha armada por la Independencia.</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">14 de Septiembre, 1813</span>
-      <p>Presentación de los "Sentimientos de la Nación" en Chilpancingo.</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">13 de Septiembre, 1847</span>
-      <p>Gesta heroica de la Batalla de Chapultepec.</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">27 de Septiembre, 1821</span>
-      <p>Consumación formal de la Independencia de México.</p>
+      <div class="fecha-card">
+        <h2>15 de Septiembre</h2>
+        <p>Grito de Dolores encabezado por Miguel Hidalgo en 1810, marcando el inicio de la lucha por la Independencia.</p>
+      </div>
+
+      <div class="fecha-card">
+        <h2>27 de Septiembre</h2>
+        <p>Consumación de la Independencia de México en 1821 con la entrada del Ejército Trigarante a la Ciudad de México.</p>
+      </div>
     </div>
   </section>
 
-  <footer>Betancourt Basurto Juan Alberto / 0503 / 5ºI</footer>
+  <!-- Pie de página con los datos del alumno -->
+  <footer>
+    Betancourt Basurto Juan Alberto / 0503 / 5ºI
+  </footer>
 
 </body>
 </html>
