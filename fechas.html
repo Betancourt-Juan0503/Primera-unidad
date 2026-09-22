@@ -62,10 +62,16 @@
     /* Contenedor que agrupa todas las tarjetas de fechas */
     .fechas-container {
       display: flex; /* Acomoda las tarjetas */
-      gap: 20px; /* Espacio de separación entre tarjetas */
-      justify-content: center; /* Mantiene centradas las tarjetas */
+      flex-direction: column; /* Pone las filas una debajo de otra */
+      gap: 20px; /* Espacio de separación entre filas */
       max-width: 1100px; /* Límite de ancho para que no se estiren de más */
       margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+    /* Filas de 3 tarjetas cada una */
+    .fechas-row {
+      display: flex; /* Acomoda las tarjetas de lado */
+      gap: 20px; /* Espacio entre tarjetas */
+      justify-content: center; /* Centra las tarjetas de la fila */
     }
     /* Diseño de cada tarjeta de fecha */
     .fecha-card {
@@ -77,12 +83,12 @@
     /* Título del día dentro de la tarjeta */
     .fecha-card h2 {
       color: #f4d03f; /* Texto dorado */
-      font-size: 1.5rem; /* Tamaño de letra mediano */
+      font-size: 1.4rem; /* Tamaño de letra mediano */
       margin-bottom: 10px; /* Espacio vacio por debajo */
     }
     /* Texto descriptivo dentro de cada tarjeta */
     .fecha-card p {
-      font-size: 1rem; /* Tamaño de letra legible */
+      font-size: 0.95rem; /* Tamaño de letra legible */
       line-height: 1.5; /* Separación entre renglones */
     }
     /* Pie de página */
@@ -117,27 +123,45 @@
   <section id="fechas">
     <h1>Fechas Importantes</h1>
     
-    <!-- Contenedor de las tarjetas con información histórica -->
+    <!-- Contenedor con las 6 fechas divididas en 2 filas -->
     <div class="fechas-container">
-      <div class="fecha-card">
-        <h2>13 de Septiembre</h2>
-        <p>Gesta Heroica de los Niños Héroes en la defensa del Castillo de Chapultepec en 1847.</p>
+      
+      <!-- Primera fila con 3 fechas -->
+      <div class="fechas-row">
+        <div class="fecha-card">
+          <h2>1 de Septiembre</h2>
+          <p>Inicio del Mes Patrio y fecha en la que tradicionalmente se rinde el Informe de Gobierno Presidencial en México.</p>
+        </div>
+
+        <div class="fecha-card">
+          <h2>13 de Septiembre</h2>
+          <p>Gesta Heroica de los Niños Héroes en la defensa del Castillo de Chapultepec durante la intervención estadounidense de 1847.</p>
+        </div>
+
+        <div class="fecha-card">
+          <h2>15 de Septiembre</h2>
+          <p>Conmemoración del Grito de Independencia dado por el cura Miguel Hidalgo y Costilla en Dolores, Guanajuato.</p>
+        </div>
       </div>
 
-      <div class="fecha-card">
-        <h2>15 de Septiembre</h2>
-        <p>Conmemoración del Grito de Independencia dado por Miguel Hidalgo en Dolores, Guanajuato.</p>
+      <!-- Segunda fila con 3 fechas -->
+      <div class="fechas-row">
+        <div class="fecha-card">
+          <h2>16 de Septiembre</h2>
+          <p>Aniversario del Inicio de la Guerra de Independencia de México en 1810 y día del Desfile Militar nacional.</p>
+        </div>
+
+        <div class="fecha-card">
+          <h2>27 de Septiembre</h2>
+          <p>Consumación de la Independencia de México en 1821 con la entrada triunfal del Ejército Trigarante a la capital.</p>
+        </div>
+
+        <div class="fecha-card">
+          <h2>30 de Septiembre</h2>
+          <p>Nacimiento de José María Morelos y Pavón en 1765, uno de los caudillos más importantes del movimiento insurgente.</p>
+        </div>
       </div>
 
-      <div class="fecha-card">
-        <h2>16 de Septiembre</h2>
-        <p>Inicio formal de la lucha por la Independencia de México en 1810.</p>
-      </div>
-
-      <div class="fecha-card">
-        <h2>27 de Septiembre</h2>
-        <p>Consumación de la Independencia en 1821 con la entrada del Ejército Trigarante.</p>
-      </div>
     </div>
   </section>
 
