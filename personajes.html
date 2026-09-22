@@ -59,7 +59,7 @@
       text-transform: uppercase; /* Pone todo en mayúsculas */
       margin-bottom: 30px; /* Espacio vacio debajo del título */
     }
-    /* Contenedor que agrupa las tarjetas y pasa abajo las que no caben */
+    /* Contenedor que agrupa las 4 tarjetas */
     .personajes-container {
       display: flex; /* Acomoda las tarjetas de lado */
       flex-wrap: wrap; /* Pasa las tarjetas abajo si no caben en una sola fila */
@@ -73,7 +73,7 @@
       background: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
       border: 1px solid #f4d03f; /* Marco o borde dorado alrededor de la tarjeta */
       padding: 20px; /* Espacio interno para que el texto no toque el borde */
-      flex: 1 1 300px; /* Tamaño que permite acomodar filas uniformes */
+      flex: 1 1 220px; /* Permite acomodar perfectamente las 4 tarjetas */
     }
     /* Imagen del personaje dentro de la tarjeta */
     .personaje-card img {
@@ -127,7 +127,7 @@
   <section id="personajes">
     <h1>Personajes Ilustres</h1>
     
-    <!-- Contenedor con las tarjetas de los 5 héroes -->
+    <!-- Contenedor con las tarjetas de los 4 personajes -->
     <div class="personajes-container">
       <div class="personaje-card">
         <img src="02.png" alt="Miguel Hidalgo">
@@ -151,12 +151,6 @@
         <img src="05.png" alt="Ignacio Allende">
         <h2>Ignacio Allende</h2>
         <p>Militar insurgente que lideró las primeras etapas de la guerra de Independencia.</p>
-      </div>
-
-      <div class="personaje-card">
-        <img src="06.png" alt="Vicente Guerrero">
-        <h2>Vicente Guerrero</h2>
-        <p>General insurgente que mantuvo viva la lucha en el sur y consumó la Independencia junto a Iturbide.</p>
       </div>
     </div>
   </section>
