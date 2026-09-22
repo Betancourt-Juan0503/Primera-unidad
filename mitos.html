@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Curiosos y Mitos - Mes Patrio</title>
+  <style>
+    /* Configuración básica para toda la página */
+    * {
+      box-sizing: border-box; /* Incluye el borde y relleno en el tamaño total */
+      margin: 0; /* Quita los espacios vacíos de afuera */
+      padding: 0; /* Quita el relleno interno por defecto */
+    }
+    /* Estilos del fondo y texto de la página */
+    body {
+      background: #006837; /* Fondo verde */
+      color: #fff; /* Texto en color blanco */
+      text-align: center; /* Centra todo el texto */
+    }
+    /* Barra de navegación fija arriba */
+    .navbar {
+      position: fixed; /* Se queda fija arriba al bajar la pantalla */
+      width: 100%; /* Ocupa todo el ancho */
+      background: #000; /* Fondo negro */
+      display: flex; /* Acomoda los elementos en fila */
+      justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
+      padding: 15px 30px; /* Espacio interno arriba y abajo e izquierda y derecha */
+    }
+    /* Texto del logo MES PATRIO */
+    .logo {
+      color: #f4d03f; /* Letra dorada */
+      font-size: 1.3rem; /* Tamaño de letra un poco más grande */
+      font-weight: bold; /* Letra en negrita */
+      text-decoration: none; /* Quita la línea subrayada */
+    }
+    /* Lista que guarda los enlaces del menú */
+    .nav-links {
+      display: flex; /* Acomoda los enlaces uno al lado del otro */
+      list-style: none; /* Quita los puntos negros de la lista */
+      gap: 15px; /* Separa los enlaces entre sí */
+    }
+    /* Cada botón del menú */
+    .nav-links a {
+      color: #fff; /* Texto blanco */
+      text-decoration: none; /* Quita el subrayado */
+      padding: 8px 16px; /* Tamaño interno del botón */
+      font-size: 0.9rem; /* Letra más pequeña */
+      border: 1px solid #fff; /* Dibuja un cuadro blanco alrededor del botón */
+    }
+    /* Sección principal de datos curiosos */
+    #curiosidades {
+      min-height: 100vh; /* Ocupa mínimo toda la altura de la pantalla */
+      padding: 100px 20px 60px; /* Espacio arriba para que la barra no tape el contenido */
+    }
+    /* Título principal de la sección */
+    #curiosidades h1 {
+      color: #f4d03f; /* Texto dorado */
+      font-size: 2.8rem; /* Tamaño de letra grande */
+      text-transform: uppercase; /* Pone todo en mayúsculas */
+      margin-bottom: 30px; /* Espacio vacio debajo del título */
+    }
+    /* Contenedor que agrupa las tarjetas de los datos curiosos */
+    .curiosidades-container {
+      display: flex; /* Acomoda las tarjetas una al lado de otra */
+      gap: 20px; /* Espacio de separación entre tarjetas */
+      justify-content: center; /* Mantiene centradas las tarjetas */
+      max-width: 1100px; /* Límite de ancho para que no se estiren de más */
+      margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+    /* Diseño de cada tarjeta de mito o curiosidad */
+    .curiosidad-card {
+      background: rgba(0, 0, 0, 0.4); /* Fondo negro */
+      border: 1px solid #f4d03f; /* Marco dorado alrededor de la tarjeta */
+      padding: 20px; /* Espacio interno para que el texto no toque el borde */
+      flex: 1; /* Hace que todas las tarjetas tengan el mismo ancho */
+    }
+    /* Título del mito o dato curioso */
+    .curiosidad-card h2 {
+      color: #f4d03f; /* Texto dorado */
+      font-size: 1.4rem; /* Tamaño de letra mediano */
+      margin-bottom: 10px; /* Espacio vacio por debajo */
+    }
+    /* Texto con la explicación histórica */
+    .curiosidad-card p {
+      font-size: 0.95rem; /* Tamaño de letra legible */
+      line-height: 1.5; /* Separación entre renglones */
+    }
+    /* Pie de página */
+    footer {
+      background: #000; /* Fondo negro */
+      padding: 20px; /* Espacio interno */
+      font-size: 1.1rem; /* Tamaño de letra */
+      font-weight: bold; /* Letra en negrita */
+      border-top: 3px solid #f4d03f; /* Línea dorada en la parte superior */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación que se queda arriba -->
+  <nav class="navbar">
+    <!-- Contenedor del logo con la bandera -->
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <a href="index.html" class="logo">MES PATRIO</a>
+      <img src="01.png" alt="Bandera" style="height: 22px;">
+    </div>
+    <!-- links para moverse entre páginas -->
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="fechas.html">Fechas Importantes</a></li>
+      <li><a href="personajes.html">Personajes Ilustres</a></li>
+      <li><a href="curiosidades.html">Datos Curiosos y Mitos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal de datos curiosos y mitos -->
+  <section id="curiosidades">
+    <h1>Datos Curiosos y Mitos</h1>
+    
+    <!-- Contenedor de las tarjetas con mitos e información histórica -->
+    <div class="curiosidades-container">
+      <div class="curiosidad-card">
+        <h2>¿Miguel Hidalgo tocó la campana?</h2>
+        <p>Mito popular. En realidad, quien tocó la campana de la parroquia para convocar al pueblo fue el campanero José José Galván, mientras Hidalgo llamaba a la multitud desde el atrio.</p>
+      </div>
+
+      <div class="curiosidad-card">
+        <h2>La verdad sobre El Pípila</h2>
+        <p>Representa a los mineros e indígenas que lucharon en la Alhóndiga de Granaditas, aunque su existencia individual se considera más un símbolo de fuerza colectiva que un personaje único.</p>
+      </div>
+
+      <div class="curiosidad-card">
+        <h2>El mito del horario del Grito</h2>
+        <p>El Grito original ocurrió al amanecer del 16 de septiembre. La tradición de celebrarlo la noche del 15 fue popularizada a finales del siglo XIX para hacerlo coincidir con festejos oficiales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página con los datos del alumno -->
+  <footer>
+    Betancourt Basurto Juan Alberto / 0503 / 5ºI
+  </footer>
+
+</body>
+</html>
