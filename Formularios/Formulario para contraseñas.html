@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios en HTML</title>
+<!-- Libreria de iconos en linea -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/7.3.1/css/all.min.css">
+
+</head>
+<body>
+
+<h1>Formularios</h1>
+<p>Un formulario permite al visitante cargar datos y que sean enviados al servidor.</p>
+<p>El HTML no tiene la responsabilidad de registrar los datos en el servidor,
+esta actividad se delega a traves de un lenguaje que se ejecute en el servidor (PHP,
+ASP, ASP.NET, Node, etc.)
+</p>
+
+<h2>Formulario con text area</h2> <!-- Agrega un subtitulo -->
+<form action="" method="post"> <!-- Crea un formulario-->
+Ingresa tu nombre:
+<input type="text" name="nombre"> <!-- Permite ingresar datos -->
+<br> <!-- Salto de linea -->
+Ingresa tu correo:
+<input type="email" name="correo"> <!-- Permite ingresar datos -->
+<br> <!-- Salto de linea -->
+Ingresa tus comentarios:
+<textarea name="comentarios" rows="1" cols="10"></textarea> <!-- Permite ingresar datos con mayor cantidad de columnas para escribir -->
+<br> <!--Salto de linea-->
+<input type="submit" value="enviar"> <!--Permite ingresar datos-->
+<input type="reset" value="borrar"> <!-- Permite ingresar datos -->
+</form> <!-- Cierra formulario-->
+
+</body> 
+</html>
