@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Idioma de la página -->
+<head> <!-- Configuración de la página -->
+  <meta charset="UTF-8"> <!-- Permite acentos y letra ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta la pantalla -->
+  <title>Formulario con Agrupamiento</title> <!-- Título de la pestaña -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Librería de íconos -->
+</head> <!-- Fin de configuración -->
+<body> <!-- Contenido visible -->
+
+<h2>Formularios con agrupamiento</h2> <!-- Título principal -->
+<form action="" method="post"> <!-- Abre el formulario -->
+  <fieldset> <!-- Cuadro delimitador de grupo -->
+    <legend>Datos personales</legend> <!-- Título del cuadro -->
+    Nombre y apellido: <!-- Texto de ayuda -->
+    <input type="text" name="nombre_apellido"><br> <!-- Caja para nombre completo -->
+    Documento valido: <!-- Texto de ayuda -->
+    <input type="file" name="documento"><br> <!-- Campo para subir un documento -->
+    Fecha de nacimiento: <!-- Texto de ayuda -->
+    <input type="date" name="fecha_nacimiento"> <!-- Calendario para fecha de nacimiento -->
+  </fieldset> <!-- Cierra el primer cuadro -->
+  <fieldset> <!-- Segundo cuadro delimitador de grupo -->
+    <legend>Datos de estudio:</legend> <!-- Título del segundo cuadro -->
+    Nombre de la escuela: <!-- Texto de ayuda -->
+    <input type="text" name="escuela"><br> <!-- Caja para escribir la escuela -->
+    Certificado valido: <!-- Texto de ayuda -->
+    <input type="file" name="certificado"><br> <!-- Campo para subir un documento -->
+    Fecha de egreso: <!-- Texto de ayuda -->
+    <input type="date" name="fecha_egreso"> <!-- Calendario para fecha de egreso -->
+  </fieldset> <!-- Cierra el segundo cuadro -->
+  <br> <!-- Salto de línea -->
+  <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button> <!-- Botón para enviar con ícono -->
+  <button type="reset">Borrar <i class="fa fa-trash"></i></button> <!-- Botón para borrar con ícono -->
+</form> <!-- Cierra el formulario -->
+
+</body> <!-- Fin del contenido visible -->
+</html> <!-- Fin del documento HTML -->
