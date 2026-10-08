@@ -68,6 +68,27 @@
       margin-top: auto;
       font-size: 0.5rem;
     }
+
+     .curiosidades-container {
+  display: flex;
+  gap: 20px; 
+  justify-content: center; 
+  max-width: 1100px; 
+  margin: 0 auto; 
+}
+
+.curiosidad-card {
+  background: #f0f0f0; 
+  padding: 15px; 
+  flex: 0.5; 
+  border-radius: 10px; 
+  
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
   </style>
 </head> 
 <body> 
@@ -85,6 +106,8 @@
     </nav>
 
     <h2>Rellene los datos solicitados</h2> 
+<div class="curiosidades-container">
+      <div class="curiosidad-card">
 
     <div class="seccion-formulario">
       <form action="" method="post"> 
@@ -112,9 +135,12 @@
 
         <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button> 
       </form> 
+    </div>
 
       <img src="vibradorcemento.png" alt="Vibrador de cemento" class="imagen-producto">
     </div>
+
+
   </main>
 
   <footer>
