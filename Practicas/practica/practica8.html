@@ -7,50 +7,43 @@
   <title>Zamazon</title> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
   <style>
-   
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      margin: 0;
+      text-align: center;
     }
 
-    .contenido-principal {
+    main {
       flex: 1;
       padding: 20px 0;
     }
 
-    .navbar {
-      width: 100%;
-      background: #D3D3D3; 
-      display: flex;
+    nav, footer {
+      background: #D3D3D3;
       padding: 15px 0;
-      margin-top: 15px;
-      margin-bottom: 25px;
+    }
+
+    nav {
+      margin: 15px 0 25px;
     }
 
     .nav-links {
       display: flex;
-      list-style: none;
       gap: 60px;
       justify-content: center;
-      width: 100%;
-      margin: 0;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .nav-links a {
       color: #000;
       text-decoration: none;
-      padding: 8px 16px;
       font-weight: bold;
     }
 
- 
     .seccion-formulario {
       display: flex;
       justify-content: center;
@@ -61,12 +54,10 @@
     }
 
     form {
-      display: inline-block;
       text-align: left;
       line-height: 2.2;
     }
 
- 
     .imagen-producto {
       max-width: 300px; 
       height: auto;
@@ -75,74 +66,59 @@
 
     footer {
       margin-top: auto;
-      background-color: #D3D3D3;
-      padding: 15px 0;
-      width: 100%;
-    }
-
-    footer h2 {
-      margin: 0;
-      font-size: 1rem;
+      font-size: 0.5rem;
     }
   </style>
 </head> 
 <body> 
 
-  <div class="contenido-principal">
-    <center>
-    
-      <h1>Zamazon</h1>
+  <main>
+    <h1>Zamazon</h1>
 
-    
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="inicio.html">Inicio</a></li>
-          <li><a href="servicio.html">Servicio al cliente</a></li>
-          <li><a href="cupones.html">Cupones</a></li>
-          <li><a href="vender.html">Vender</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="servicio.html">Servicio al cliente</a></li>
+        <li><a href="cupones.html">Cupones</a></li>
+        <li><a href="vender.html">Vender</a></li>
+      </ul>
+    </nav>
 
-      <h2>Rellene los datos solicitados</h2> 
+    <h2>Rellene los datos solicitados</h2> 
 
-   
-      <div class="seccion-formulario">
-        <form action="" method="post"> 
-          Nombre completo: 
-          <input type="text" name="nombre"> 
-          <br> 
-          Numero de telefono:
-          <input type="text" name="telefono"> 
-          <br>
-          Colonia:
-          <input type="text" name="colonia"> 
-          <br>
-          Calle:
-          <input type="text" name="calle"> 
-          <br>
-          No. de casa:
-          <input type="text" name="Numcasa"> 
-          <br>
-          Correo electronico:
-          <input type="text" name="correo"> 
-          <br>
-          Metodo de pago:
-          <input type="text" name="pago"> 
-          <br>
+    <div class="seccion-formulario">
+      <form action="" method="post"> 
+        Nombre completo: 
+        <input type="text" name="nombre"> 
+        <br> 
+        Numero de telefono:
+        <input type="text" name="telefono"> 
+        <br>
+        Colonia:
+        <input type="text" name="colonia"> 
+        <br>
+        Calle:
+        <input type="text" name="calle"> 
+        <br>
+        No. de casa:
+        <input type="text" name="Numcasa"> 
+        <br>
+        Correo electronico:
+        <input type="text" name="correo"> 
+        <br>
+        Metodo de pago:
+        <input type="text" name="pago"> 
+        <br>
 
-          <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button> 
-        </form> 
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button> 
+      </form> 
 
-      
-        <img src="vibradorcemento.png" alt="Vibrador de cemento" class="imagen-producto">
-      </div>
-    </center>
-  </div>
+      <img src="vibradorcemento.png" alt="Vibrador de cemento" class="imagen-producto">
+    </div>
+  </main>
 
   <footer>
-    <center>
-      <h2>Betancourt Basurto Juan Alberto / 0503 / 5ºI </h2>
-    </center>
+    <h2>Betancourt Basurto Juan Alberto / 0503 / 5ºI</h2>
   </footer>
 
 </body> 
