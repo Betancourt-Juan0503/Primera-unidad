@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cinépolis</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #f0f0f0; }
+    
+    header { background: #0b2161; color: white; padding: 10px; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; }
+
+    main { padding: 20px; }
+    section { margin-bottom: 30px; background: white; padding: 15px; border-radius: 5px; }
+
+    .pelicula { display: inline-block; width: 160px; margin: 10px; text-align: center; vertical-align: top; }
+    .pelicula img { width: 100%; height: 230px; object-fit: cover; border-radius: 6px; }
+
+    form { max-width: 300px; margin-bottom: 15px; }
+    input { display: block; width: 100%; margin-bottom: 10px; padding: 5px; }
+
+    footer { background: #222; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cinépolis</h1>
+    <nav>
+      <a href="#cartelera">Cartelera</a>
+      <a href="#estrenos">Próximos Estrenos</a>
+      <a href="#club">Tarjeta Club</a>
+      <a href="#login">Inicio / Registro</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="cartelera">
+      <h2>En Cartelera</h2>
+
+      <div class="pelicula">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLoY7FKEDsy-mdX_Ej3q0usKNpHjFDKhfZm2-YNuiC2Q&s=10" alt="El Laberinto del Fauno">
+        <h3>El Laberinto del Fauno</h3>
+        <button>Comprar</button>
+      </div>
+
+      <div class="pelicula">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQw8UH7WGeYi81LwMxJ3VkRfQgKaw1xHSguXA3ETKl5A&s=10" alt="Madre Siniestra">
+        <h3>Madre Siniestra</h3>
+        <button>Comprar</button>
+      </div>
+    </section>
+
+    <section id="estrenos">
+      <h2>Próximos Estrenos</h2>
+
+      <div class="pelicula">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFmjD_9ieHDV9InSLUYp7Dx-lz5eu4scYuSuSXoVEwGA&s=10" alt="Cristiada">
+        <h3>Cristiada</h3>
+      </div>
+
+      <div class="pelicula">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95XUbh8z9BC0sPRG_OVFcHl7Y_w3UKEjQcQwL8-9i5Q&s=10" alt="La Isla De Las Muñecas">
+        <h3>La Isla De Las Muñecas</h3>
+      </div>
+    </section>
+
+    <section id="club">
+      <h2>Ingresar con Tarjeta Club Cinépolis</h2>
+      <form>
+        <label>Número de Tarjeta:</label>
+        <input type="text">
+        <label>PIN:</label>
+        <input type="password">
+        <button type="submit">Ingresar a Club</button>
+      </form>
+    </section>
+
+
+    <section id="login">
+      <h2>Iniciar Sesión o Registrarse</h2>
+      <form>
+        <label>Correo Electrónico:</label>
+        <input type="email">
+        <label>Contraseña:</label>
+        <input type="password">
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cinépolis - Sitio Académico Básico</p>
+  </footer>
+
+</body>
+</html>
