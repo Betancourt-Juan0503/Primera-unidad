@@ -1,1 +1,67 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda Nike</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #f4f4f4; }
+    header { background: white; padding: 10px; border-bottom: 1px solid #ccc; }
+    nav a { margin-left: 10px; }
+    
+    /* Productos */
+    .contenedor-productos { display: flex; gap: 15px; margin: 20px 0; }
+    .tarjeta { background: white; border: 1px solid #ccc; padding: 10px; text-align: center; width: 180px; }
+    .img-espacio { background: #ddd; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    .precio { color: red; font-weight: bold; }
+
+    /* Formulario */
+    form { background: white; padding: 15px; border: 1px solid #ccc; width: 300px; }
+    input { display: block; width: 100%; margin-bottom: 10px; padding: 5px; }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h2>Nike</h2>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="registro.html">Registro</a>
+      <a href="login.html">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN DE PRODUCTOS -->
+  <h3>Catálogo</h3>
+  <div class="contenedor-productos">
+
+    <!-- PRODUCTO 1 -->
+    <div class="tarjeta">
+      <div class="img-espacio">[Imagen 1]</div>
+      <h4>Producto 1</h4>
+      <p class="precio">$00.00</p>
+      <a href="#comprar"><button>Comprar</button></a>
+    </div>
+
+    <!-- PRODUCTO 2 -->
+    <div class="tarjeta">
+      <div class="img-espacio">[Imagen 2]</div>
+      <h4>Producto 2</h4>
+      <p class="precio">$00.00</p>
+      <a href="#comprar"><button>Comprar</button></a>
+    </div>
+
+    <!-- PRODUCTO 3 -->
+    <div class="tarjeta">
+      <div class="img-espacio">[Imagen 3]</div>
+      <h4>Producto 3</h4>
+      <p class="precio">$00.00</p>
+      <a href="#comprar"><button>Comprar</button></a>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
