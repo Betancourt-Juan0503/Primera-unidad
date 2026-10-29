@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- titulo que sale arriba en la pestaña -->
+  <title>Registro - Nike</title>
+
+  <style>
+    /* tipo de letra sencillo para toda la pagina */
+    body { font-family: sans-serif; margin: 20px; }
+    
+    /* la parte de arriba alineada al centro */
+    .top-bar { text-align: center; }
+    .top-bar a { text-decoration: none; color: #000; font-weight: bold; margin: 0 10px; }
+
+    /* el menu con los links alineados en medio */
+    nav { text-align: center; border-bottom: 2px solid #ccc; padding: 10px; margin-top: 15px; }
+    nav a { text-decoration: none; color: #000; font-weight: bold; margin: 0 15px; }
+
+    /* el cuadro del formulario centrado y pequeño */
+    form { width: 250px; margin: 30px auto; border: 1px solid #ccc; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    
+    /* las cajitas para escribir texto */
+    input { width: 100%; padding: 5px; margin-top: 5px; box-sizing: border-box; }
+    
+    /* el boton de enviar */
+    button { width: 100%; background: #000; color: #fff; padding: 10px; margin-top: 15px; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- la parte de arriba con la marca y el link -->
+  <div class="top-bar">
+    <h2>NIKE</h2>
+    <a href="registro.html">Iniciar Sesión / Registrarse</a>
+  </div>
+
+  <!-- las opciones del menu para regresar a la tienda -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="index.html">Tenis</a>
+    <a href="index.html">Ropa</a>
+    <a href="index.html">Ofertas</a>
+  </nav>
+
+  <!-- formulario que manda la informacion al archivo de php -->
+  <form action="guardar_registro.php" method="POST">
+    <h3 style="text-align: center;">Registro</h3>
+    
+    <!-- campo para escribir el nombre -->
+    <label>Nombre Completo:</label>
+    <input type="text" name="nombre" required>
+
+    <!-- campo para el correo -->
+    <label>Correo Electrónico:</label>
+    <input type="email" name="correo" required>
+
+    <!-- campo para la contraseña -->
+    <label>Contraseña:</label>
+    <input type="password" name="password" required>
+
+    <!-- boton que manda los datos a la base -->
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- titulo que sale en la pestaña del navegador -->
+  <title>Tienda Nike</title>
+
+  <style>
+    /* letra sencilla para toda la pagina */
+    body { font-family: sans-serif; margin: 20px; }
+    
+    /* la parte de arriba alineada al centro */
+    .top-bar { text-align: center; }
+    .top-bar a { text-decoration: none; color: #000; font-weight: bold; margin-left: 15px; }
+
+    /* el menu con las opciones centraditas y la raya de abajo */
+    nav { text-align: center; border-bottom: 2px solid #ccc; padding: 10px; margin-top: 15px; }
+    nav a { text-decoration: none; color: #000; font-weight: bold; margin: 0 15px; }
+
+    /* seccion para centrar todos los productos */
+    main { text-align: center; margin-top: 30px; }
+    
+    /* las cajitas de los productos alineadas una al lado de otra */
+    .tarjeta { display: inline-block; width: 180px; margin: 15px; text-align: center; vertical-align: top; }
+    
+    /* tamaño para que las fotos de los tenis se vean parejas */
+    .img-espacio { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
+    
+    /* para resaltar el precio */
+    .precio { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <!-- encabezado con el nombre de la marca y el boton de acceso -->
+  <div class="top-bar">
+    <h2>NIKE</h2>
+    <a href="registro.html">Iniciar Sesión / Registrarse</a>
+  </div>
+
+  <!-- menu principal de navegacion -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#">Tenis</a>
+    <a href="#">Ropa</a>
+    <a href="#">Ofertas</a>
+  </nav>
+
+  <!-- catalogo con los 3 productos de muestra -->
+  <main>
+    <!-- producto 1 -->
+    <div class="tarjeta">
+      <img class="img-espacio" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Nike Red">
+      <h4>Producto 1</h4>
+      <p>Tenis para Hombre</p>
+      <p class="precio">$2,999</p>
+    </div>
+
+    <!-- producto 2 -->
+    <div class="tarjeta">
+      <img class="img-espacio" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400" alt="Nike White">
+      <h4>Producto 2</h4>
+      <p>Tenis para Mujer</p>
+      <p class="precio">$3,199</p>
+    </div>
+
+    <!-- producto 3 -->
+    <div class="tarjeta">
+      <img class="img-espacio" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400" alt="Nike Colorful">
+      <h4>Producto 3</h4>
+      <p>Calzado Unisex</p>
+      <p class="precio">$2,499</p>
+    </div>
+  </main>
+
+</body>
+</html>
